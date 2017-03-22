@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>BusMaintenanceReportServlet</servlet-name>
+        <servlet-class>servlet.BusMaintenanceReportServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>MaintenanceServlet</servlet-name>
+        <servlet-class>servlet.MaintenanceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>BusMaintenanceReportServlet</servlet-name>
+        <url-pattern>/BusMaintenanceReportServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>MaintenanceServlet</servlet-name>
+        <url-pattern>/MaintenanceServlet</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <resource-env-ref>
+    <resource-env-ref-name>jdbc/campustransitsystem</resource-env-ref-name>
+    <resource-env-ref-type>javax.sql.DataSource</resource-env-ref-type>
+</resource-env-ref>
+</web-app>
